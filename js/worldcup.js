@@ -1,11 +1,18 @@
 var player_forecast = [];
 var match_facts = [];
 
-$.ajax({
+initialize();
+
+function initialize()
+{
+	if (!uid) 
+		return;
+
+	$.ajax({
 		type: 'GET',
 		dataType: 'json',
 		data: {},
-		url: "forecast.json",
+		url: "forecast" + uid + ".json",
 		success: function (forecast) {
 			player_forecast = forecast;       	
 		},
@@ -13,7 +20,7 @@ $.ajax({
         	createGroupsElement();
 			initializeRounds();}
 	});
-
+}
 
 var apiUrlRound = "https://footballdb.herokuapp.com/api/v1/event/world.2014/";
 var imagesPath = "https://footballdb.herokuapp.com/assets/flags/24x24/"
@@ -60,15 +67,18 @@ teams_dict["kor"] = {name: "Corea Del Sur", flag_code: "kr", group:8};
 
 function createGroupsElement()
 {
+
 	var j=1;
 	for (;j<14;j++)	{
 		var divo = $("<div>").addClass("group").addClass("collapse").addClass("group" + j).appendTo($("#world"));
-		$("<div>").appendTo(divo).addClass("groupTit").text((j <= 8)? "Grupo " + lettersArray[j-1] : zonesArray[j-9]);}
+		$("<div>").appendTo(divo)
+			.addClass("groupTit")
+			.text((j <= 8)? "Grupo " + lettersArray[j-1] : zonesArray[j-9])
+			.click(function()	{
+				$(this).parent().toggleClass("collapse");
+			});
+	}
 }
-
-$(".groupTit").click(function()	{
-	$(this).parent().toggleClass("collapse");}
-);
 
 function initializeRounds()
 { 
@@ -181,7 +191,7 @@ function createGroupAndMatch(match){
 
 $(".save").click(function()
 	{
-		$.post("save_player_forecast.php", {name: "forecast", json: match_facts}, function(result){
+		$.post("save_player_forecast.php", {name: "forecast" + uid, json: match_facts}, function(result){
 
 		});
 	}

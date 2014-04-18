@@ -10,10 +10,9 @@
  
   
 </head>
-<body>
-
-<div id="fb-root"></div>
 <script>
+
+var uid = 1129200740 , accessToken;
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '110528582328864',
@@ -22,12 +21,13 @@
     });
 
     FB.Event.subscribe('auth.authResponseChange', function(response) {
-	    if (response.status === 'connected') {
-        console.log(FB)
-	    } else {
-	      FB.login();
-	    }
-  	});
+      if (response.status === 'connected') {
+          uid = response.authResponse.userID;
+          accessToken = response.authResponse.accessToken;
+      } else {
+        FB.login();
+      }
+    });
   };
 
   (function(d, s, id){
@@ -37,10 +37,12 @@
      js.src = "//connect.facebook.net/es_AR/all.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-  
 
 </script>
 
+<body>
+
+<div id="fb-root"></div>
 <h1>ProDeMundial</h1>
 
 <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>

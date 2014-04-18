@@ -15,7 +15,7 @@ div:hover
       height:20px;
     }
 .group{
-      width:275px;
+      width:250px;
       border:solid 2px #666;
       margin:1px;
       -webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
@@ -24,7 +24,7 @@ div:hover
 
     }
 .match{
-      width:65px;
+      width:55px;
       height:30px;
       line-height:30px;
       color:#666;
@@ -45,7 +45,7 @@ div:hover
       top: 2px;
     }
 .team{
-      width:50px;
+      width:45px;
       overflow:hidden;
       height:30px;
       line-height:30px;
@@ -54,16 +54,15 @@ div:hover
 #world
 {  
   margin:auto;
-  width: 1124px;
+  width: 1024px;
   margin-bottom: 10px;
-
   cursor:pointer;
 }
 
 .group:nth-child(9),.group:nth-child(10), .group:nth-child(11), .group:nth-child(12), .group:nth-child(13)
 {
   float: none;
-  width: 1118px;
+  width: 1018px;
   margin: auto;
   text-align: center;
 }
