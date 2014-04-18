@@ -29,9 +29,7 @@ var uid = 1129200740 , accessToken;
       }
     });
 
-    FB.api('/me/friends', {accessToken:accessToken},function(response) {
-      console.log(response);
-    });
+   
   };
 
   (function(d, s, id){
@@ -41,6 +39,22 @@ var uid = 1129200740 , accessToken;
      js.src = "//connect.facebook.net/es_AR/all.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+
+  function testAPI() {
+     FB.login(function(){
+        FB.api('/me', 'post', {message: 'Hello, world!'});
+      },function(response) {
+        console.log(response);
+      });
+    }
+
+
+    function retrieveFriends()
+    {
+      FB.api('/me/friends',function(response) {
+        console.log(response);
+      });
+    }
 
 </script>
 
