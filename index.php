@@ -27,9 +27,7 @@ var uid = 1129200740 , accessToken;
       } else {
         FB.login();
       }
-    });
-
-   
+    });   
   };
 
   (function(d, s, id){
@@ -40,21 +38,22 @@ var uid = 1129200740 , accessToken;
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-  function testAPI() {
-     FB.login(function(){
-        FB.api('/me', 'post', {message: 'Hello, world!'});
-      },function(response) {
-        console.log(response);
-      });
-    }
-
-
-    function retrieveFriends()
+    function fetchFriends()
     {
       FB.api('/me/friends',function(response) {
-        console.log(response);
+        var friends = [];
+        for(var friend in response.data)
+        {
+          friends.push(response.data);
+        }
+        initializeFriends(friends);
       });
     }
+
+    $(document).ready(function()
+      {
+        fetchFriends();       
+      });
 
 </script>
 
@@ -64,9 +63,10 @@ var uid = 1129200740 , accessToken;
 <h1>ProDeMundial</h1>
 
 
-
+<div id='dashboard'></div>
 <div id='world'></div>
 <div id='save' class="save" onclick="">Ir Guardando</div>
+<div id='friends'></div>
 <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
  <script src="js/worldcup.js"></script>
  

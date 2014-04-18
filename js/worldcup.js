@@ -22,6 +22,21 @@ function initialize()
 	});
 }
 
+function initializeFriends(friends)
+{
+	for(var friend in friends){
+		$.ajax({
+			type: 'GET',
+			dataType: 'json',
+			data: {},
+			url: "forecast" + friends[friend].id + ".json",
+			success: function (forecast) {
+				appendFriend(forecast, friends[friend]);
+			}
+		});
+	}
+}
+
 var apiUrlRound = "https://footballdb.herokuapp.com/api/v1/event/world.2014/";
 var imagesPath = "https://footballdb.herokuapp.com/assets/flags/24x24/"
 var lettersArray = ["A", "B","C", "D","E", "F","G", "H"]
@@ -65,9 +80,47 @@ teams_dict["bel"] = {name: "Bélgica", flag_code: "be", group:8};
 teams_dict["alg"] = {name: "Algeria", flag_code: "dz", group:8};
 teams_dict["kor"] = {name: "Corea Del Sur", flag_code: "kr", group:8};
 
+function getScore(forecast)
+{
+	var points = 0;
+	for(var key_match in forecast)
+	{
+		var match = forecast[key_match];
+		if (match.score1 && match.score2
+			&& match.playerScore1 && match.playerScore1)
+		{
+			if(match.score1 == match.playerScore1)
+				points +=1;
+			if(match.score2 == match.playerScore2)
+				points +=1;
+
+			var result = match.score1 - match.score2;
+			var resultPlayer = match.playerScore1 - match.playerScore2;
+
+			if ((result < 0) && (resultPlayer <0) ||
+				(result == 0) && (resultPlayer ==0) ||
+				(result >0) && (resultPlayer >0)
+				)
+				points +=3;
+		}		
+	}
+	return points;
+}
+
+function appendFriend(forecast, friend)
+{
+	var divo = $("<div>").addClass("friend").appendTo($("#friends"));
+			$("<div>").appendTo(divo)
+			.addClass("groupTit")
+			.text(friend.name);
+
+			$("<div>").appendTo(divo)
+			.addClass("score")
+			.text(getScore(forecast) + "Puntos");
+}
+
 function createGroupsElement()
 {
-
 	var j=1;
 	for (;j<14;j++)	{
 		var divo = $("<div>").addClass("group").addClass("collapse").addClass("group" + j).appendTo($("#world"));
@@ -118,6 +171,11 @@ function finalizeGroupRetrieving()
 		setUserForecastToRetrievedMatchs(match_facts[match])
 		createGroupAndMatch(match_facts[match]);
 	}
+	var myResult = getScore(match_facts);
+
+	var divo = $("<div>").addClass("myResult").appendTo($("#dashboard"));
+			$("<div>").appendTo(divo)
+			.text(myResult + " Puntos");
 }
 
 function setUserForecastToRetrievedMatchs(match)
