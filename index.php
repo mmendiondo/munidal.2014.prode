@@ -28,6 +28,10 @@ var uid = 1129200740 , accessToken;
         FB.login();
       }
     });
+
+    FB.api('/me/friends', {accessToken:accessToken},function(response) {
+      console.log(response);
+    });
   };
 
   (function(d, s, id){
@@ -45,11 +49,11 @@ var uid = 1129200740 , accessToken;
 <div id="fb-root"></div>
 <h1>ProDeMundial</h1>
 
-<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
+
 
 <div id='world'></div>
 <div id='save' class="save" onclick="">Ir Guardando</div>
-
+<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
  <script src="js/worldcup.js"></script>
  
 </body>
