@@ -15,8 +15,8 @@ $.ajax({
 	});
 
 
-var apiUrlRound = "http://footballdb.herokuapp.com/api/v1/event/world.2014/";
-var imagesPath = "http://footballdb.herokuapp.com/assets/flags/24x24/"
+var apiUrlRound = "https://footballdb.herokuapp.com/api/v1/event/world.2014/";
+var imagesPath = "https://footballdb.herokuapp.com/assets/flags/24x24/"
 var lettersArray = ["A", "B","C", "D","E", "F","G", "H"]
 var zonesArray = ["Octavos", 
 					"Cuartos", 
