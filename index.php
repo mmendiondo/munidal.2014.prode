@@ -12,7 +12,7 @@
 </head>
 <script>
 
-var uid = 1129200740 , accessToken;
+var uid , accessToken;
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '110528582328864',
