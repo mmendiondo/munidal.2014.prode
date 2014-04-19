@@ -26,10 +26,10 @@
       xfbml      : true
     });
 
-   FB.api('/me/friends', "get", 
-    function(response){
-      console.log(response); 
-      friends = response.data});
+     FB.login(function(response) {
+      console.log(response);
+      getFriends();
+    }, {scope: 'basic_info,user_likes'});   
   };
 
   (function(d){
@@ -38,6 +38,13 @@
      js.src = "//connect.facebook.net/es_LA/all.js";
      d.getElementsByTagName('head')[0].appendChild(js);
   }(document));
+
+  function getFriends() {
+    FB.api('/me/friends', function(response) {
+      console.log(response);
+        friends = response.data;
+    });
+  }
 
   </script>
 
