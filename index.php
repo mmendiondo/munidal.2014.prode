@@ -75,7 +75,7 @@
 
 <div class="tagboard">
 <!--  tagboard Mi@  -->
-<script type="text/javascript" src="http://tagboards.miarroba.es/ver.php?id=217787"></script>
+<script type="text/javascript" src="https://tagboards.miarroba.es/ver.php?id=217787"></script>
 <!-- tagboard Mi@  -->
 </div>
 
@@ -84,23 +84,23 @@
 <div class="encuestas">
   
 <!-- Votaciones online de miarroba.es -->
-<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=280700"></script>
+<script type="text/javascript" src="https://votaciones.miarroba.es/ver.php?id=280700"></script>
 <!-- Votaciones online de miarroba.es -->
 
 <!-- Votaciones online de miarroba.es -->
-<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=306380"></script>
+<script type="text/javascript" src="https://votaciones.miarroba.es/ver.php?id=306380"></script>
 <!-- Votaciones online de miarroba.es -->
 
 <!-- Votaciones online de miarroba.es -->
-<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=306381"></script>
+<script type="text/javascript" src="https://votaciones.miarroba.es/ver.php?id=306381"></script>
 <!-- Votaciones online de miarroba.es -->
 
 <!-- Votaciones online de miarroba.es -->
-<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=306379"></script>
+<script type="text/javascript" src="https://votaciones.miarroba.es/ver.php?id=306379"></script>
 <!-- Votaciones online de miarroba.es -->
 
 <!-- Votaciones online de miarroba.es -->
-<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=306378"></script>
+<script type="text/javascript" src="https://votaciones.miarroba.es/ver.php?id=306378"></script>
 <!-- Votaciones online de miarroba.es -->
 
 
