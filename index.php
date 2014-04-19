@@ -32,10 +32,10 @@
         getFriends();
         initialize();
       }
-      //else{
-       // uid = "1129200740";
-       //  initialize();
-       //}
+      /*else{
+        uid = "1129200740";
+         initialize();
+       }*/
     }, {scope: 'basic_info,user_likes'});
   };
 

@@ -32,9 +32,12 @@ Date.prototype.addMonths = function (value) {
 function preventNotNumber(e)
 {
    var keyCode = (e.keyCode ? e.keyCode : e.which);
-    if((e.currentTarget.innerText.length >= 2   ||
-      !String.fromCharCode(keyCode).match(/\d+$/))  &&      
-        keyCode != 8 &&
-        keyCode != 9)
+    if(keyCode > 57)
       e.preventDefault();
+}
+
+function limitCharacters(elem, number)
+{
+     if(elem.innerText.length > number)
+      elem.innerText = elem.innerText.substring(0, number);
 }

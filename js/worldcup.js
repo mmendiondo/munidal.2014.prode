@@ -237,7 +237,10 @@ function createGroupAndMatch(match){
 					match.playerScore1 = this.innerText;
 			})
 		.keydown(function( e ) {
-				preventNotNumber(e, match.play_a)
+				preventNotNumber(e, match.play_a);				
+			})
+		.keyup(function( e ) {				
+				limitCharacters(this, 2);
 			});
 
 	$("<div>").appendTo(divo)
@@ -252,7 +255,10 @@ function createGroupAndMatch(match){
 			})
 		.keydown(function( e ) 
 			{
-				preventNotNumber(e, match.play_a)
+				preventNotNumber(e, match.play_a);
+			})
+		.keyup(function( e ) {				
+				limitCharacters(this, 2);
 			});
 
 	$("<img>").appendTo(divo)
