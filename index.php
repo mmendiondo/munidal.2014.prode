@@ -3,15 +3,14 @@
 <head>
   <meta charset='UTF-8'>
   <title>ProdeMundial</title>
-
+  
   <LINK href="css/style.css" rel="stylesheet" type="text/css"> 
   <script src="js/libs/jquerymin.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/worldcup.js"></script>
   
 </head>
-<script>
-    
+<script>   
 
 </script>
 
@@ -31,12 +30,6 @@
         uid = response.authResponse.userID;
         getMe();
         getFriends();
-        initialize();
-      }
-      else
-      {
-        //debug
-        uid = "1129200740";
         initialize();
       }
     }, {scope: 'basic_info,user_likes'});
@@ -66,6 +59,7 @@
 
 
 <div id='dashboard'></div>
+<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
 <div id='world'>
  
 </div>
@@ -107,8 +101,5 @@
 </div>
 </div>
 
-<div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
-
- 
 </body>
 </html>
