@@ -26,7 +26,10 @@
       xfbml      : true
     });
 
-   FB.api('/me/friends', "get", function(response){console.log(reponse); friends = response.data});
+   FB.api('/me/friends', "get", 
+    function(response){
+      console.log(response); 
+      friends = response.data});
   };
 
   (function(d){
