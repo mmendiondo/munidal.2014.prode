@@ -3,16 +3,22 @@ var match_facts = [];
 
 initialize();
 
+
+function uid()
+{
+	return 1129200740;
+}
+
 function initialize()
 {
-	if (!uid) 
+	if (!uid()) 
 		return;
 
 	$.ajax({
 		type: 'GET',
 		dataType: 'json',
 		data: {},
-		url: "forecast" + uid + ".json",
+		url: "forecast" + uid() + ".json",
 		success: function (forecast) {
 			player_forecast = forecast;       	
 		},
@@ -249,7 +255,7 @@ function createGroupAndMatch(match){
 
 $(".save").click(function()
 	{
-		$.post("save_player_forecast.php", {name: "forecast" + uid, json: match_facts}, function(result){
+		$.post("save_player_forecast.php", {name: "forecast" + uid(), json: match_facts}, function(result){
 
 		});
 	}
