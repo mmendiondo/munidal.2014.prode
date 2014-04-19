@@ -25,6 +25,7 @@ div:hover
       line-height:20px;
       color: #FFF;
       font-weight: bold;
+      padding-left: 4px;
     }
 .group{
       width:243px;
@@ -124,7 +125,7 @@ div:hover
   height: 120px;
 }
 
-.friend
+#friend
 {
    width: 70px;
   background: #002222;
@@ -136,9 +137,46 @@ div:hover
   font-size: 12px;
   font-weight: bold;
   color: #FFCC99;
-  padding: 2px;
+  padding: 2px 6px;
 }
 .imgUser{
   margin: auto;
   padding: 10px;
+}
+.encuestas iframe
+{
+  float:left;
+  height:400px;
+}
+
+.encuestas
+{
+  width:900px;
+  height: 350px;
+  margin: auto;
+  margin-top: 10px;
+}
+.tagboard
+{
+  width: 800px;
+  height: 200px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.encuestasContainer
+{
+  width: 800px;
+  height: 200px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.encuestasIframe
+{
+  border:0;
+  overflow: hidden;
+  width:930px;
+  height: 370px;
+  margin: auto;
 }

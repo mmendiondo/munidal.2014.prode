@@ -131,7 +131,7 @@ function appendFriend(forecast, friend)
 
 			$("<img>").appendTo(divo)
 			.addClass("imgUser")
-			.prop("src", "https://graph.facebook.com/"+friend.id+"/picture?type=large" );
+			.prop("src", "https://graph.facebook.com/"+friend.id+"/picture?type=small" );
 }
 
 function createGroupsElement()

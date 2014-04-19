@@ -64,6 +64,7 @@
 <div class="title">ProDelMundial</div>
 
 
+
 <div id='dashboard'></div>
 <div id='world'>
  
@@ -71,6 +72,41 @@
  <div id='save' class="save" onclick="">Ir Guardando</div>
 
 <div id='friends'></div>
+
+<div class="tagboard">
+<!--  tagboard Mi@  -->
+<script type="text/javascript" src="http://tagboards.miarroba.es/ver.php?id=217787"></script>
+<!-- tagboard Mi@  -->
+</div>
+
+<div class="ecuestasContainer">
+  
+<div class="encuestas">
+  
+<!-- Votaciones online de miarroba.es -->
+<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=280700"></script>
+<!-- Votaciones online de miarroba.es -->
+
+<!-- Votaciones online de miarroba.es -->
+<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=306380"></script>
+<!-- Votaciones online de miarroba.es -->
+
+<!-- Votaciones online de miarroba.es -->
+<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=306381"></script>
+<!-- Votaciones online de miarroba.es -->
+
+<!-- Votaciones online de miarroba.es -->
+<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=306379"></script>
+<!-- Votaciones online de miarroba.es -->
+
+<!-- Votaciones online de miarroba.es -->
+<script type="text/javascript" src="http://votaciones.miarroba.es/ver.php?id=306378"></script>
+<!-- Votaciones online de miarroba.es -->
+
+
+</div>
+</div>
+
 <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
  <script src="js/worldcup.js"></script>
  
