@@ -82,6 +82,10 @@ div:hover
   margin-right: 150px;
 }
 
+#dashboard
+{
+  height: 80px;
+}
 .title
 {
   text-align: left;
@@ -97,7 +101,7 @@ div:hover
 .myDatafemale{color:#DD9988;}
 .myDatamale{color:#222266;}
 
-.myData{float:left;height:50px;}
+.myData{float:left;height:100px;}
 .save{
       width:75px;
       overflow:hidden;
@@ -166,7 +170,7 @@ div:hover
 .encuestasContainer
 {
   width: 800px;
-  height: auto;
+  height: 200px;
   margin: auto;
   margin-top: 10px;
 }
