@@ -50,7 +50,7 @@
   }
    function getMe() {
     FB.api('/me', function(response) {
-      setMe(response.data);
+      setMe(response);
     });
   }
   </script>
