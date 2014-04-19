@@ -149,13 +149,13 @@ div:hover
 .encuestas iframe
 {
   float:left;
-  height:400px;
+  min-height:400px;
 }
 
 .encuestas
 {
   width:900px;
-  height: 350px;
+  height: auto;
   margin: auto;
   margin-top: 10px;
 }
