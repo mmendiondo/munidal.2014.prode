@@ -32,6 +32,10 @@
         getFriends();
         initialize();
       }
+      //else{
+       // uid = "1129200740";
+       //  initialize();
+       //}
     }, {scope: 'basic_info,user_likes'});
   };
 
@@ -54,16 +58,17 @@
   }
   </script>
 
+
+<div class="locker"></div>
+
 <div class="title">ProDelMundial</div>
-
-
 
 <div id='dashboard'></div>
 <div class="fb-like" data-send="true" data-width="450" data-show-faces="true"></div>
 <div id='world'>
  
 </div>
- <div id='save' class="save" onclick="">Ir Guardando</div>
+ <div id='save' class="save" >Ir Guardando</div>
 
 <div id='friends'></div>
 

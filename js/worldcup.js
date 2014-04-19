@@ -9,6 +9,7 @@ function initialize()
 		return;
 
 	$.ajax({
+		cache: false,
 		type: 'GET',
 		dataType: 'json',
 		data: {},
@@ -26,6 +27,7 @@ function initializeFriends(friends)
 {
 	for(var friend in friends){
 		$.ajax({
+			cache: false,
 			type: 'GET',
 			dataType: 'json',
 			data: {},
@@ -262,10 +264,13 @@ function createGroupAndMatch(match){
 		.text(teams_dict[match.team2_key].name);
 }
 
-$(".save").click(function()
-	{
-		$.post("save_player_forecast.php", {name: "forecast" + uid, json: match_facts}, function(result){
-
-		});
-	}
-);
+$(document).ready(function(){
+	$(".save").click(function()
+		{
+			$(".locker").show();
+			$.post("save_player_forecast.php", {name: "forecast" + uid, json: match_facts}, function(result){
+				$(".locker").hide();
+			});
+		}
+	);
+});
