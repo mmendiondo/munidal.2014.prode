@@ -24,7 +24,6 @@ function initialize()
 
 function initializeFriends(friends)
 {
-	console.log(friends);
 	for(var friend in friends){
 		$.ajax({
 			type: 'GET',
@@ -163,7 +162,6 @@ function fetchRoundDay(day)
 		data: {},
 		url: apiUrlRound + "round/" + day,
 		error: function (jqXHR, textStatus, errorThrown) {	
-			console.log(jqXHR);		
 		},
 		success: function (response) {
 			addToCorrespondingGroup(response.games);
