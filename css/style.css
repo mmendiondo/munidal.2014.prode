@@ -166,7 +166,7 @@ div:hover
 .encuestasContainer
 {
   width: 800px;
-  height: 200px;
+  height: auto;
   margin: auto;
   margin-top: 10px;
 }
