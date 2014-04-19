@@ -40,7 +40,8 @@ function initializeFriends(friends)
 function setMe(myData)
 {
 	var divo = $("<div>")
-		.addClass("myData" + myData.first_name)
+		.addClass("myData")
+		.addClass("myData" + myData.gender)
 		.appendTo($("#dashboard"));
 		$("<div>").appendTo(divo)
 		.text(myData.first_name);
