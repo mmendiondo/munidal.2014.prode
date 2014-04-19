@@ -97,7 +97,7 @@ div:hover
 .myDatafemale{color:#DD9988;}
 .myDatamale{color:#222266;}
 
-.myData{float:left;}
+.myData{float:left;height:50px;}
 .save{
       width:75px;
       overflow:hidden;
