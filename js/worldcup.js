@@ -1,24 +1,18 @@
 var player_forecast = [];
 var match_facts = [];
+var uid, me, friends;
 
-initialize();
-
-
-function uid()
-{
-	return 1129200740;
-}
 
 function initialize()
 {
-	if (!uid()) 
+	if (!uid) 
 		return;
 
 	$.ajax({
 		type: 'GET',
 		dataType: 'json',
 		data: {},
-		url: "forecast" + uid() + ".json",
+		url: "forecast" + uid + ".json",
 		success: function (forecast) {
 			player_forecast = forecast;       	
 		},
@@ -28,7 +22,7 @@ function initialize()
 	});
 }
 
-function initializeFriends(friends)
+function initializeFriends()
 {
 	for(var friend in friends){
 		$.ajax({
@@ -224,10 +218,11 @@ function createGroupAndMatch(match){
 		.text(match.playerScore1)
 		.blur(function()
 			{
-				match.playerScore1 = this.innerText;
+				if(new Date(match.play_at) > today())
+					match.playerScore1 = this.innerText;
 			})
 		.keydown(function( e ) {
-				preventNotNumber(e)
+				preventNotNumber(e, match.play_a)
 			});
 
 	$("<div>").appendTo(divo)
@@ -236,12 +231,13 @@ function createGroupAndMatch(match){
 		.prop("contentEditable", (new Date(match.play_at) > today()))
 		.text(match.playerScore2)
 		.blur(function()
-			{			
-				match.playerScore2 = this.innerText;
+			{
+				if(new Date(match.play_at) > today())	
+					match.playerScore2 = this.innerText;
 			})
 		.keydown(function( e ) 
 			{
-				preventNotNumber(e)
+				preventNotNumber(e, match.play_a)
 			});
 
 	$("<img>").appendTo(divo)
@@ -255,7 +251,7 @@ function createGroupAndMatch(match){
 
 $(".save").click(function()
 	{
-		$.post("save_player_forecast.php", {name: "forecast" + uid(), json: match_facts}, function(result){
+		$.post("save_player_forecast.php", {name: "forecast" + uid, json: match_facts}, function(result){
 
 		});
 	}

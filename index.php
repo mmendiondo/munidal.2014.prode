@@ -26,10 +26,14 @@
       xfbml      : true
     });
 
-     FB.login(function(response) {
-      console.log(response);
-      getFriends();
-    }, {scope: 'basic_info,user_likes'});   
+    FB.login(function(response) {
+      if (response && response.authResponse){
+        uid = response.authResponse.userID;
+        getMe();
+        getFriends();
+        initialize();
+      }
+    }, {scope: 'basic_info,user_likes'});
   };
 
   (function(d){
@@ -45,7 +49,13 @@
         friends = response.data;
     });
   }
-
+   function getMe() {
+    FB.api('/me', function(response) {
+      console.log(response);
+      me = response.data;
+   
+    });
+  }
   </script>
 
 <h1>ProDeMundial</h1>

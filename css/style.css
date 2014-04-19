@@ -23,7 +23,7 @@ div:hover
       font-weight: bold;
     }
 .group{
-      width:244px;
+      width:243px;
       border:solid 2px #455 ;
       margin:1px;
       -webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
@@ -65,7 +65,7 @@ div:hover
 #world
 {  
   margin:auto;
-  width: 1000px;
+  width: 996px;
   margin-bottom: 10px;
   cursor:pointer;
 }
@@ -80,7 +80,7 @@ div:hover
 .group:nth-child(9),.group:nth-child(10), .group:nth-child(11), .group:nth-child(12), .group:nth-child(13)
 {
   float: none;
-  width: 994px;
+  width: 990px;
   margin: auto;
   text-align: center;
 }
