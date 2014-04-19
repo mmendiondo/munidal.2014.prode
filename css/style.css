@@ -6,6 +6,10 @@ body{
     }
 
 
+div
+{
+  border-radius: 4px;
+}
 div:hover
 {
   border-color:#006C51;
@@ -69,13 +73,18 @@ div:hover
   margin-bottom: 10px;
   cursor:pointer;
 }
-#dashboard
+#dashboard, .title
 {
   font-size: 60px;
   color:#666;
   font-weight: bold;
   text-align: right;
   margin-right: 150px;
+}
+
+.title
+{
+  text-align: left;
 }
 .group:nth-child(9),.group:nth-child(10), .group:nth-child(11), .group:nth-child(12), .group:nth-child(13)
 {
@@ -85,8 +94,8 @@ div:hover
   text-align: center;
 }
 
-.myDataFemale{color:#DD9988;}
-.myDataMale{color:#222266;}
+.myDatafemale{color:#DD9988;}
+.myDatamale{color:#222266;}
 
 .myData{float:left;}
 .save{
@@ -107,4 +116,29 @@ div:hover
 .collapse
 {
   height:20px;
+}
+
+.friends
+{
+  width: 100%;
+  height: 120px;
+}
+
+.friend
+{
+   width: 70px;
+  background: #002222;
+  float: left;
+  margin: 2px;
+}
+.scoreFriend
+{
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFCC99;
+  padding: 2px;
+}
+.imgUser{
+  margin: auto;
+  padding: 10px;
 }

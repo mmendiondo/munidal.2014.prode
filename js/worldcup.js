@@ -24,6 +24,7 @@ function initialize()
 
 function initializeFriends(friends)
 {
+	console.log(friends);
 	for(var friend in friends){
 		$.ajax({
 			type: 'GET',
@@ -125,8 +126,8 @@ function appendFriend(forecast, friend)
 			.text(friend.name);
 
 			$("<div>").appendTo(divo)
-			.addClass("score")
-			.text(getScore(forecast) + "Puntos");
+			.addClass("scoreFriend")
+			.text(getScore(forecast) + " Puntos");
 
 			$("<img>").appendTo(divo)
 			.addClass("imgUser")

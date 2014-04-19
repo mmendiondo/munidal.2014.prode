@@ -33,6 +33,12 @@
         getFriends();
         initialize();
       }
+      else
+      {
+        //debug
+        uid = "1129200740";
+        initialize();
+      }
     }, {scope: 'basic_info,user_likes'});
   };
 
@@ -55,7 +61,7 @@
   }
   </script>
 
-<h1>ProDeMundial</h1>
+<div class="title">ProDelMundial</div>
 
 
 <div id='dashboard'></div>
