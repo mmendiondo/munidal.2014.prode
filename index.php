@@ -29,9 +29,9 @@
     FB.login(function(response){
       var token = reponse.data.access_token
       console.log(reponse);
-    );
+    });
 
-   FB.api('/me/friends', "get", {access_token:token}, function(response){friends = response.data});
+   FB.api('/me/friends', "get", {access_token:token}, function(response){console.log(reponse); friends = response.data});
   };
 
   (function(d){
