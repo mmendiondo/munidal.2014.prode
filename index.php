@@ -45,15 +45,12 @@
 
   function getFriends() {
     FB.api('/me/friends', function(response) {
-      console.log(response);
-        friends = response.data;
+       initializeFriends(response.data);
     });
   }
    function getMe() {
     FB.api('/me', function(response) {
-      console.log(response);
-      me = response.data;
-   
+      setMe(response.data);
     });
   }
   </script>

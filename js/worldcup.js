@@ -1,6 +1,6 @@
 var player_forecast = [];
 var match_facts = [];
-var uid, me, friends;
+var uid, me;
 
 
 function initialize()
@@ -22,7 +22,7 @@ function initialize()
 	});
 }
 
-function initializeFriends()
+function initializeFriends(friends)
 {
 	for(var friend in friends){
 		$.ajax({
@@ -35,6 +35,15 @@ function initializeFriends()
 			}
 		});
 	}
+}
+
+function setMe(myData)
+{
+	var divo = $("<div>")
+		.addClass("myData" + myData.first_name)
+		.appendTo($("#dashboard"));
+		$("<div>").appendTo(divo)
+		.text(myData.first_name);
 }
 
 var apiUrlRound = "https://footballdb.herokuapp.com/api/v1/event/world.2014/";
@@ -117,6 +126,10 @@ function appendFriend(forecast, friend)
 			$("<div>").appendTo(divo)
 			.addClass("score")
 			.text(getScore(forecast) + "Puntos");
+
+			$("<img>").appendTo(divo)
+			.addClass("imgUser")
+			.prop("src", "https://graph.facebook.com/"+friend.id+"/picture?type=large" );
 }
 
 function createGroupsElement()

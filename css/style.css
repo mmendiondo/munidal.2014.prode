@@ -85,6 +85,9 @@ div:hover
   text-align: center;
 }
 
+.myDataFemale{color:#DD9988;}
+.myDataMale{color:#222266;}
+
 .save{
       width:75px;
       overflow:hidden;
