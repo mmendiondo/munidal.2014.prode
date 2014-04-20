@@ -191,6 +191,8 @@ function finalizeGroupRetrieving()
 	var divo = $("<div>").addClass("myResult").appendTo($("#dashboard"));
 			$("<div>").appendTo(divo)
 			.text(myResult + " Puntos");
+			
+	$(".locker").hide();
 }
 
 function setUserForecastToRetrievedMatchs(match)

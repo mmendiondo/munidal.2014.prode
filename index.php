@@ -24,7 +24,7 @@
       status     : true,
       xfbml      : true
     });
-
+    $(".locker").show();
     FB.login(function(response) {
       if (response && response.authResponse){
         uid = response.authResponse.userID;
@@ -32,10 +32,10 @@
         getFriends();
         initialize();
       }
-      /*else{
+      else{
         uid = "1129200740";
          initialize();
-       }*/
+       }
     }, {scope: 'basic_info,user_likes'});
   };
 
@@ -59,7 +59,7 @@
   </script>
 
 
-<div class="locker"></div>
+<div class="locker">Cargando...(refresca si tarda mucho)</div>
 
 <div class="title">ProDelMundial</div>
 
